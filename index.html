@@ -57,23 +57,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <scipt src="moment.min.js"></scipt>
-    /
+    
     <script>
       //testing moment 
     console.log(moment());
     console.log(moment().format('LLL'));
 
 
-    //global variables here -------------------------------
+    //global constants here -------------------------------
     const clock = document.getElementById("clock");
     const row1 = document.getElementById("roe1");
-
-    //global variables here -------------------------------
+    const row2 = document.getElementById("roe2");
+    const row3 = document.getElementById("roe3");
+    const row4 = document.getElementById("roe4");
+    const row5 = document.getElementById("roe5");
+    const row6 = document.getElementById("roe6");
+    const row7 = document.getElementById("roe7");
+    const row8 = document.getElementById("roe8");
+    const row9 = document.getElementById("roe9");
+    const row10 = document.getElementById("roe10");
+    //global constants here -------------------------------
 
 
     setInterval(() => {
       const now = moment();
-      const readableTime = now.format("h:mm:ss A");
+      const readableTime = now.format("dddd MMMM Do, h:mm:ss A");
       clock.textContent = readableTime;
 
      // if ("h" > 6) {
@@ -82,14 +90,18 @@
 
     }, 1000)
 
-    //End clock code
+    //End Clock Code
 
+    //Begin Color Code
+
+    //Row Seperation1
     const hour1 = moment();
-    const hourTime1 = hour1.format("h"); 
-
+    const hourTime1 = hour1.format("H"); 
+    console.log(hourTime1)
+    
     if (hourTime1 == 9) {
      row1.style.backgroundColor = "#90EE90"
-      console.log("It is bewteen 7 and 8");
+      
 
     } else if (hourTime1 > 9) {
       row1.style.backgroundColor = "#FF7F50"
@@ -99,12 +111,154 @@
 
     }
 
+    //Row Seperation2
+    const hour2 = moment();
+    const hourTime2 = hour2.format("H"); 
+  
+    if (hourTime2 == 10) {
+     row2.style.backgroundColor = "#90EE90"
+      
 
-   // const hour2 = moment();
-    //const hourTime2 = hour2.format("h");
-    //if (hourTime2 == 8) {
-     // console.log("It is bewteen 7 and 9");
-    //}
+    } else if (hourTime2 > 10) {
+      row2.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime2 < 10) {
+      row2.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation3
+    const hour3 = moment();
+    const hourTime3 = hour3.format("H"); 
+    
+    if (hourTime3 == 11) {
+     row3.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime3 > 11) {
+      row3.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime3 < 11) {
+      row3.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation4
+    const hour4 = moment();
+    const hourTime4 = hour4.format("H"); 
+    
+    if (hourTime4 == 12) {
+     row4.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime4 > 12) {
+      row4.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime4 < 12) {
+      row4.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation5
+    const hour5 = moment();
+    const hourTime5 = hour5.format("H"); 
+    
+    if (hourTime5 == 13) {
+     row5.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime5 > 13) {
+      row5.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime5 < 13) {
+      row5.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation6
+    const hour6 = moment();
+    const hourTime6 = hour6.format("H"); 
+    
+    if (hourTime6 == 14) {
+     row6.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime6 > 14) {
+      row6.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime6 < 14) {
+      row6.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation7
+    const hour7 = moment();
+    const hourTime7 = hour7.format("H"); 
+    
+    if (hourTime7 == 15) {
+     row7.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime7 > 15) {
+      row7.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime7 < 15) {
+      row7.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation8
+    const hour8 = moment();
+    const hourTime8 = hour8.format("H"); 
+    
+    if (hourTime8 == 16) {
+     row8.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime8 > 16) {
+      row8.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime8 < 16) {
+      row8.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation9
+    const hour9 = moment();
+    const hourTime9 = hour9.format("H"); 
+    
+    if (hourTime9 == 17) {
+     row9.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime9 > 17) {
+      row9.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime9 < 17) {
+      row9.style.backgroundColor = "#87CEFA"
+
+    }
+
+    //Row Seperation10
+    const hour10 = moment();
+    const hourTime10 = hour10.format("H"); 
+    
+    if (hourTime10 == 18) {
+     row10.style.backgroundColor = "#90EE90"
+      
+
+    } else if (hourTime10 > 18) {
+      row10.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime10 < 18) {
+      row10.style.backgroundColor = "#87CEFA"
+
+    }
+    
+
+
+
+
 
     
     
