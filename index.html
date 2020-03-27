@@ -26,13 +26,53 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <div id="clock"></div>
+
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
+      <h2 class="date"></h2>
+      <div class="calender">
+        <div class="empty"></div>
+        <div class="times">
+          <div class="row row-1"> 9 AM</div>
+          <div class="row row-2"> 10 AM</div>
+          <div class="row row-3"> 11 AM</div>
+          <div class="row row-4"> 12 PM</div>
+          <div class="row row-5"> 1 PM</div>
+          <div class="row row-6"> 2 PM</div>
+          <div class="row row-7"> 3 PM</div>
+          <div class="row row-8"> 4 PM</div>
+          <div class="row row-9"> 5 PM</div>
+          <div class="row row-10"> 6 PM</div>
+
+          
+
+        </div>
+        
+
       <!-- Timeblocks go here -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <scipt src="moment.min.js"></scipt>
+    /
+    <script>
+      //testing moment 
+    console.log(moment());
+    console.log(moment().format('LLL'));
+    
+    const clock = document.getElementById("clock");
+
+    setInterval(() => {
+      const now = moment();
+      const readableTime = now.format("h:mm:ss A");
+      console.log(readableTime);
+      console.log("hello");
+      clock.textContent = readableTime;
+    }, 1000)
+    
+    </script>
   </body>
 </html>
