@@ -35,16 +35,16 @@
       <div class="calender">
         <div class="empty"></div>
         <div class="times">
-          <div class="row row-1"> 9 AM</div>
-          <div class="row row-2"> 10 AM</div>
-          <div class="row row-3"> 11 AM</div>
-          <div class="row row-4"> 12 PM</div>
-          <div class="row row-5"> 1 PM</div>
-          <div class="row row-6"> 2 PM</div>
-          <div class="row row-7"> 3 PM</div>
-          <div class="row row-8"> 4 PM</div>
-          <div class="row row-9"> 5 PM</div>
-          <div class="row row-10"> 6 PM</div>
+          <div id="roe1" class="row row-1 "> 9 AM</div>
+          <div id="roe2" class="row row-2"> 10 AM</div>
+          <div id="roe3" class="row row-3"> 11 AM</div>
+          <div id="roe4" class="row row-4"> 12 PM</div>
+          <div id="roe5" class="row row-5"> 1 PM</div>
+          <div id="roe6" class="row row-6"> 2 PM</div>
+          <div id="roe7" class="row row-7"> 3 PM</div>
+          <div id="roe8" class="row row-8"> 4 PM</div>
+          <div id="roe9" class="row row-9"> 5 PM</div>
+          <div id="roe10"class="row row-10"> 6 PM</div>
 
           
 
@@ -62,16 +62,51 @@
       //testing moment 
     console.log(moment());
     console.log(moment().format('LLL'));
-    
+
+
+    //global variables here -------------------------------
     const clock = document.getElementById("clock");
+    const row1 = document.getElementById("roe1");
+
+    //global variables here -------------------------------
+
 
     setInterval(() => {
       const now = moment();
       const readableTime = now.format("h:mm:ss A");
-      console.log(readableTime);
-      console.log("hello");
       clock.textContent = readableTime;
+
+     // if ("h" > 6) {
+       // console.log("Its past 6");
+      //}
+
     }, 1000)
+
+    //End clock code
+
+    const hour1 = moment();
+    const hourTime1 = hour1.format("h"); 
+
+    if (hourTime1 == 9) {
+     row1.style.backgroundColor = "#90EE90"
+      console.log("It is bewteen 7 and 8");
+
+    } else if (hourTime1 > 9) {
+      row1.style.backgroundColor = "#FF7F50"
+    
+    } else if (hourTime1 < 9) {
+      row1.style.backgroundColor = "#87CEFA"
+
+    }
+
+
+   // const hour2 = moment();
+    //const hourTime2 = hour2.format("h");
+    //if (hourTime2 == 8) {
+     // console.log("It is bewteen 7 and 9");
+    //}
+
+    
     
     </script>
   </body>
